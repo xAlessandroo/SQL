@@ -1,3 +1,3 @@
-// You've hired an assistant for the bookstore named Martin. Grant him permission to view and update the Books table, but he shouldn't be able to delete any records. IP address of Martinis martin@localhost .
+// Martin made a few mistakes in updating book details. Revoke his update permissions but let him continue viewing the books.
 
-GRANT SELECT, UPDATE ON Books TO 'martin'@'localhost';
+REVOKE UPDATE ON Books FROM 'martin'@'localhost';
