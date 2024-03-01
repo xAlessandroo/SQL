@@ -1,19 +1,63 @@
-// Imagine you're designing a database to manage a bookstore. Create a table named "Books" with attributes for book_id, title, author, genre, published_year, isbn, price, rating, and stock_count.
+// You've received new stock for the bookstore. Insert details for the following books:
 
-// CREATE TABLE Book (
-// 	book_id INTEGER PRIMARY KEY,
-//     title TEXT NOT NULL,
-//     author TEXT NOT NULL,
-//     genre TEXT,
-//     published_year INTEGER,
-//     isbn TEXT,
-//     price REAL NOT NULL,
-//     rating REAL,
-//     stock_count INTEGER
-// )
+// "A Journey to the Center" by Jules Verne
 
-// You want to add more details about each book. Modify the "Books" table to include columns for the publisher and the number of pages.
+// Genre: Adventure
+// Published Year: 1864
+// ISBN: 1234567890123
+// Price: $12.99
+// Rating: 4.5
+// Stock Count: 10
+// Publisher: Verne Publishing
+// Pages: 350
 
-ALTER TABLE Book ADD COLUMN publisher TEXT
+// "War and Peace" by Leo Tolstoy
 
-ALTER TABLE Book ADD COLUMN number_pages INTEGER
+// Genre: Historical
+// Published Year: 1869
+// ISBN: 1234567890124
+// Price: $14.99
+// Rating: 4.8
+// Stock Count: 5
+// Publisher: Tolstoy Prints
+// Pages: 1200
+// "Whispers of the Wind" by Amelia Blackburn
+
+// Genre: Romance
+// Published Year: 1982
+// ISBN: 1234567890125
+// Price: $9.99
+// Rating: 4.2
+// Stock Count: 20
+// Publisher: Blackburn House
+// Pages: 275
+// "The Galactic Odyssey" by Orion Starfield
+
+// Genre: Science Fiction
+// Published Year: 2005
+// ISBN: 1234567890126
+// Price: $19.99
+// Rating: 4.9
+// Stock Count: 15
+// Publisher: Nebula Press
+// Pages: 450
+// Based on these details, insert the information into the Books table.
+
+INSERT INTO Book(
+   title,
+   author,
+   genre,
+   published_year,
+   isbn,
+   price,
+   rating,
+   stock_count,
+   publisher,
+   number_pages
+ )
+ VALUES
+ ("A Journey to the Center", "Jules Verne", "Adventure", 1864, "1234567890123", 12.99, 4.5, 10, "Verne Publishing", 350),
+ ("War and Peace", "Leo Tolstoy", "Historical", 1869, "1234567890124", 14.99, 4.8, 5, "Tolstoy Prints", 1200),
+ ("Whispers of the Wind", "Amelia Blackburn", "Romance", 1982, "1234567890125", 9.99, 4.2, 20, "Blackburn House", 275),
+ ("The Galactic Odyssey", "Orion Starfield", "Science Fiction", 2005, "1234567890126", 19.99, 4.9, 15, "Nebula Press", 450);
+
